@@ -1,9 +1,11 @@
+using Newtonsoft.Json;
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class JSONPlaceHolder : MonoBehaviour
+public class NewtonSoftTest : MonoBehaviour
 {
     // Start is called before the first frame update
     private void Start()
@@ -40,12 +42,12 @@ public class JSONPlaceHolder : MonoBehaviour
                 case UnityWebRequest.Result.Success:
                     Debug.Log(pages[page] + ":\nReceived: " + webRequest.downloadHandler.text);
 
-                    string wrappedJson = JsonHelper.WrapArrayInItems(webRequest.downloadHandler.text);
-                    var res = JsonHelper.FromJson<JSONPlaceHolderUser>(wrappedJson);
-                    if (res != null)
+                    List<User> myDeserializedClass = JsonConvert.DeserializeObject<List<User>>(webRequest.downloadHandler.text);
+               
+                    if (myDeserializedClass != null)
                     {
-                        Debug.Log($"{res.Length} Users returned.");
-                        res.ToList().ForEach(x => Debug.Log($" Name: {x.name}"));
+                        Debug.Log($"{myDeserializedClass.Count} Users returned.");
+                        myDeserializedClass.ForEach(x => Debug.Log($" Name: {x.name}"));
                         //Debug.Log($"User 0 = {res[0].name}");
                     }
                     else

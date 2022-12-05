@@ -2,10 +2,10 @@
 
 ## Scene : JSONPlaceHolder
 
-Example de requetes vers un WebAPI en tuilisant que les classes de Unity.
+Example de requetes vers un WebAPI en utilisant que les classes de Unity.
 
-* UnityWebRequest
-* JsonUtility
+* UnityWebRequest : HTTP request
+* JsonUtility : JSON serialize/deserialize
 
 Voir ce post pour plus d'infos:
 https://stackoverflow.com/questions/36239705/serialize-and-deserialize-json-and-json-array-in-unity
