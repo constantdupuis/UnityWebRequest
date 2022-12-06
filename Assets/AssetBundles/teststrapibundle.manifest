@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 4169023636
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 1b11d90d44f67c719e97a3425db78159
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b0363f7088f9761414f730641bf9a24b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Textures/Checker-Polycount.png
+- Assets/Textures/color_ramp_03.png
+- Assets/Textures/color_ramp_02.png
+- Assets/Textures/color_ramp_01.png
+Dependencies: []
